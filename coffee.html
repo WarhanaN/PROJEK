@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi E-commerce - Produk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>☕ Kopi E-commerce ☕</h1>
+        <p>Pilih Kopi Favorit Anda</p>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <a href="index.html">Pemilik</a>
+            <a href="coffee.html">Produk Kopi</a>
+ 
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h2>Kopi yang Tersedia</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-photo"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop" alt="Kopi Arabica Gayo" loading="lazy"></div>
+                <h3>Kopi Arabica Gayo</h3>
+                <p>Kopi premium dari dataran tinggi Gayo, rasa fruity dan asam seimbang.</p>
+                <div class="price">Rp 75.000 / 250g</div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-photo"><img src="4.jpeg" alt="Kopi Robusta Lampung" loading="lazy"></div>
+                <h3>Kopi Robusta Lampung</h3>
+                <p>Body tebal, rasa cokelat kuat, cocok untuk espresso.</p>
+                <div class="price">Rp 55.000 / 250g</div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-photo"><img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=400&h=300&fit=crop" alt="Kopi Toraja" loading="lazy"></div>
+                <h3>Kopi Toraja</h3>
+                <p>Aroma floral, aftertaste herbal, kopi khas Sulawesi.</p>
+                <div class="price">Rp 80.000 / 250g</div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-photo"><img src="5.jpeg" alt="Blended House" loading="lazy"></div>
+                <h3>Blended House</h3>
+                <p>Campuran sempurna Arabica-Robusta, rasa balance untuk daily brew.</p>
+                <div class="price">Rp 65.000 / 250g</div>
+            </div>
+        </div>
+        
+        <div class="message-section">
+            <h2>Pesan Kopi Anda</h2>
+            <form id="orderForm" class="order-form">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="product">Produk:</label>
+                    <select id="product" name="product" required>
+                        <option value="">Pilih Kopi</option>
+                        <option value="arabica">Kopi Arabica Gayo - Rp 75.000</option>
+                        <option value="robusta">Kopi Robusta Lampung - Rp 55.000</option>
+                        <option value="toraja">Kopi Toraja - Rp 80.000</option>
+                        <option value="blended">Blended House - Rp 65.000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Jumlah, alamat pengiriman, dll..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Kirim Pesan</button>
+            </form>
+        </div>
+        
+        <div class="social-section">
+            <h2>Hubungi Kami</h2>
+            <a href="https://instagram.com/koecommerce" class="social-btn insta" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://facebook.com/koecommerce" class="social-btn" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>&copy; 2026 Kopi E-commerce. Semua hak dilindungi.</p>
+        <script>
+            document.getElementById('orderForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const product = document.getElementById('product').value;
+                alert('Terima kasih ' + name + '! Pesanan untuk ' + product + ' telah diterima. Kami akan hubungi via email. 😊');
+                this.reset();
+            });
+        </script>
+    </footer>
+</body>
+</html>
+
